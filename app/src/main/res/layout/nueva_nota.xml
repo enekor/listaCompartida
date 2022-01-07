@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent" android:padding="10dp">
+
+    <Button
+            android:text="Ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/ok"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.476"
+            app:layout_constraintTop_toBottomOf="@+id/otroTexto"
+            android:layout_marginTop="30dp"/>
+    <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/grupoColores" app:layout_constraintTop_toBottomOf="@+id/nuevoTexto"
+            android:layout_marginTop="10dp">
+        <RadioButton
+                android:text="Rojo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/rojo"/>
+        <RadioButton
+                android:text="Verde"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/verde"/>
+        <RadioButton
+                android:text="Azul"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/azul"/>
+        <RadioButton
+                android:text="Otro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/otro"/>
+    </RadioGroup>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="Contenido"
+            android:ems="10"
+            android:id="@+id/nuevoTexto"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" android:minHeight="48dp"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="#RRGGBB"
+            android:ems="10"
+            android:id="@+id/otroTexto"
+            app:layout_constraintTop_toBottomOf="@+id/grupoColores"
+            android:layout_marginTop="10dp" android:minHeight="48dp" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
